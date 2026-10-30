@@ -10,7 +10,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middl
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/schedule', [DashboardController::class, 'schedule']);
+    Route::get('/schedule', [DashboardController::class, 'schedule'])->name('schedule');
 });
 
 Route::redirect('/', '/dashboard');

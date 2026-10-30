@@ -8,7 +8,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $title = 'Bakuna Tracker – Purok Lastname';
+        $title = 'Bakuna Tracker - Purok Ang';
 
         $schedules = Vaccination::orderBy('scheduled_at')->get();
 
@@ -27,5 +27,13 @@ class DashboardController extends Controller
             'schedules',
             'alerts'
         ));
+    }
+
+    public function schedule()
+    {
+        $title = 'Vaccination Schedule';
+        $schedules = Vaccination::orderBy('scheduled_at')->get();
+
+        return view('schedule.index', compact('title', 'schedules'));
     }
 }

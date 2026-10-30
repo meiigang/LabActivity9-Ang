@@ -28,5 +28,9 @@
     <main>
         @yield('content')
     </main>
+
+    <footer class="mt-8 border-t border-gray-200 bg-white px-8 py-4 text-sm text-gray-500">
+        Bakuna Tracker &middot; Community vaccination records
+    </footer>
 </body>
 </html>

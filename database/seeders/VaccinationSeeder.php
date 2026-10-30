@@ -26,7 +26,6 @@ class VaccinationSeeder extends Seeder
         'dose' => '1st dose', 'scheduled_at' => '2026-08-17', 'status' => 'Done'],
         ['patient_name' => 'Hannah Lee', 'purok' => 'Purok 5', 'vaccine' => 'Anti-Flu',
         'dose' => 'Monthly', 'scheduled_at' => '2026-11-26', 'status' => 'Scheduled'],
-        // ... Pentavalent, OPV, MMR, your own vaccine, your birthday row
         ];
         foreach ($rows as $row) {
             Vaccination::create($row);
