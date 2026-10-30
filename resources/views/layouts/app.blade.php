@@ -12,6 +12,8 @@
 
         @auth
             <div class="flex items-center gap-4">
+                <a href="{{ route('dashboard') }}" class="text-blue-600 hover:underline">Dashboard</a>
+                <a href="{{ route('schedule') }}" class="text-blue-600 hover:underline">Schedules</a>
                 <span>Hi, {{ auth()->user()->name }}</span>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
