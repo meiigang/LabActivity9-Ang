@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title }}</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body class="font-sans bg-gray-100 p-8">
+@extends('layouts.app')
+
+@section('title', $title)
+
+@section('content')
+<div class="p-8">
     <h1 class="mb-6 text-3xl font-bold">{{ $title }}</h1>
 
     <div class="grid gap-4 md:grid-cols-4">
@@ -30,5 +27,5 @@
             </div>
         @endforeach
     </div>
-</body>
-</html>
+</div>
+@endsection
